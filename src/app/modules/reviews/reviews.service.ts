@@ -24,15 +24,15 @@ import { ReviewModel } from './reviews.model';
 //   return result;
 // };
 
-const updateReviewFromDB = async (id: string, payload: Partial<TReview>) => {
-  const result = await ReviewModel.findOneAndUpdate({ _id: id }, payload, {
-    new: true,
-  });
-  if (!result) {
-    throw new AppError(httpStatus.NOT_FOUND, 'Data not found !');
-  }
-  return result;
-};
+// const updateReviewFromDB = async (id: string, payload: Partial<TReview>) => {
+//   const result = await ReviewModel.findOneAndUpdate({ _id: id }, payload, {
+//     new: true,
+//   });
+//   if (!result) {
+//     throw new AppError(httpStatus.NOT_FOUND, 'Data not found !');
+//   }
+//   return result;
+// };
 
 const deleteReviewFromDB = async (id: string) => {
   const result = await ReviewModel.findOneAndUpdate({ id });

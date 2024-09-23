@@ -1,8 +1,8 @@
-import mongoose from "mongoose";
+// import mongoose from "mongoose";
 
-export type TReview = {
-    userId: mongoose.Types.ObjectId;
-    rating: number;
-    comment: string;
-    createdAt: Date;
-}
+// export type TReview = {
+//     userId: mongoose.Types.ObjectId;
+//     rating: number;
+//     comment: string;
+//     createdAt: Date;
+// }

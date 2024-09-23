@@ -16,12 +16,12 @@ router.get('/', ReviewController.getAllReview);
 
 router.get('/:id', ReviewController.getSingleReview);
 
-router.put(
-  '/:id',
-  auth('admin'),
-  zodValidateRequest(ReviewValidation.createReviewValidationSchema),
-  ReviewController.updateReview,
-);
+// router.put(
+//   '/:id',
+//   auth('admin'),
+//   zodValidateRequest(ReviewValidation.createReviewValidationSchema),
+//   ReviewController.updateReview,
+// );
 
 router.delete('/:id', auth('admin'), ReviewController.deleteReview);
 

@@ -3,18 +3,18 @@ import AppError from '../../errors/handleAppError';
 import { TReview } from './reviews.interface';
 import { ReviewModel } from './reviews.model';
 
-const createReviewIntoDB = async (data: TReview) => {
-  const result = await ReviewModel.create(data);
-  return result;
-};
+// const createReviewIntoDB = async (data: TReview) => {
+//   const result = await ReviewModel.create(data);
+//   return result;
+// };
 
-const getAllReviewFromDB = async () => {
-  const result = await ReviewModel.find();
-  if (!result || result.length === 0) {
-    throw new AppError(httpStatus.NOT_FOUND, 'Data not found !');
-  }
-  return result;
-};
+// const getAllReviewFromDB = async () => {
+//   const result = await ReviewModel.find();
+//   if (!result || result.length === 0) {
+//     throw new AppError(httpStatus.NOT_FOUND, 'Data not found !');
+//   }
+//   return result;
+// };
 
 const getSingleReviewFromDB = async (id: string) => {
   const result = await ReviewModel.findById(id);

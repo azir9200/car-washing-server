@@ -1,16 +1,16 @@
 import express from 'express';
-import zodValidateRequest from '../../middlewares/zodValidateRequest';
+// import zodValidateRequest from '../../middlewares/zodValidateRequest';
 import { auth } from '../../middlewares/auth';
-import { ReviewValidation } from './reviews.zodValidation';
+// import { ReviewValidation } from './reviews.zodValidation';
 import { ReviewController } from './reviews.controller';
 
 const router = express.Router();
 
-router.post(
-  '/create',
-  zodValidateRequest(ReviewValidation.createReviewValidationSchema),
-  ReviewController.createReview,
-);
+// router.post(
+//   '/create',
+//   zodValidateRequest(ReviewValidation.createReviewValidationSchema),
+//   ReviewController.createReview,
+// );
 
 router.get('/', ReviewController.getAllReview);
 

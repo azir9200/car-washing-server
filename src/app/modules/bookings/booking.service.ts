@@ -6,11 +6,7 @@ import { JwtPayload } from 'jsonwebtoken';
 
 const createBookingIntoDB = async (user: JwtPayload, booking: TBooking) => {
   const userInfo = { user, ...booking };
-<<<<<<< HEAD
 
-=======
-  // const result = await BookingModel.create(userInfo);
->>>>>>> e7afde135fe53997d5c8b13d05f9f8730506f867
   const result = (await BookingModel.create(userInfo)).populate([
     { path: 'serviceId' },
     { path: 'slotId' },

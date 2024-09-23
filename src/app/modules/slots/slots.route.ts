@@ -13,7 +13,6 @@ router.post(
 );
 
 // Route to get available slots
-router.get('/available', SlotController.getAvailableSlots);
+router.get('/availability', SlotController.getAvailableSlots);
 
 export const SlotRoutes = router;
-

@@ -1,6 +1,6 @@
 import { z } from 'zod';
 
-export const createAdminValidationSchema = z.object({
+export const createUserValidationSchema = z.object({
   body: z.object({
     name: z.string(),
     email: z.string().email({ message: 'Invalid email address' }),
@@ -13,15 +13,7 @@ export const createAdminValidationSchema = z.object({
   }),
 });
 
-const updateUserValidations = z.object({
-  body: z.object({
-    name: z.string().optional(),
-    phone: z.string().optional(),
-    address: z.string().optional(),
-  }),
-});
 
 export const UserValidation = {
-  createAdminValidationSchema,
-  updateUserValidations,
+ createUserValidationSchema,
 };

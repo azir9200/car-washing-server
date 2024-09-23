@@ -11,12 +11,10 @@ export const createServiceValidationSchema = z.object({
     duration: z
       .number()
       .positive({ message: 'Duration must be a positive number' }),
-    image: z.string().url({ message: 'Image must be a valid URL' }),
-    isDeleted: z.boolean().optional(), // Optional, with default handled in Mongoose
+    isDeleted: z.boolean().optional(),
   }),
 });
 
-// Update service validation schema
 export const updateServiceValidationSchema = z.object({
   body: z.object({
     name: z

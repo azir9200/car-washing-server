@@ -34,18 +34,18 @@ import { ReviewModel } from './reviews.model';
 //   return result;
 // };
 
-const deleteReviewFromDB = async (id: string) => {
-  const result = await ReviewModel.findOneAndUpdate({ id });
-  if (!result) {
-    throw new AppError(httpStatus.NOT_FOUND, 'Data not found !');
-  }
-  return result;
-};
+// const deleteReviewFromDB = async (id: string) => {
+//   const result = await ReviewModel.findOneAndUpdate({ id });
+//   if (!result) {
+//     throw new AppError(httpStatus.NOT_FOUND, 'Data not found !');
+//   }
+//   return result;
+// };
 
-export const ReviewServices = {
-  createReviewIntoDB,
-  getAllReviewFromDB,
-  getSingleReviewFromDB,
-  updateReviewFromDB,
-  deleteReviewFromDB,
-};
+// export const ReviewServices = {
+//   createReviewIntoDB,
+//   getAllReviewFromDB,
+//   getSingleReviewFromDB,
+//   updateReviewFromDB,
+//   deleteReviewFromDB,
+// };

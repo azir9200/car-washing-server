@@ -2,6 +2,7 @@ import httpStatus from 'http-status';
 import AppError from '../../errors/handleAppError';
 import { TSlot } from './slots.interface';
 import { SlotModel } from './slots.model';
+import { Types } from 'mongoose';
 
 const SERVICE_DURATION = 60; // Service duration in minutes
 
@@ -26,7 +27,7 @@ export const generateSlots = (
     );
 
     slots.push({
-      service: serviceId,
+      service: new Types.ObjectId(serviceId),
       booked: false,
       date,
       startTime: slotStartTime,
